@@ -1,0 +1,99 @@
+
+:root:has(#mood:checked) {
+    --mainBgColor: #D78C23;
+}
+body:has(#mood:checked) #Chefs{
+    color: var(--mainBgColor);
+    background-color: #202020;
+}
+body:has(#mood:checked) #Home{
+    color: var(--mainBgColor);
+    background-color: #252525;
+}
+body:has(#mood:checked) ::selection{
+    color: var(--darkColor);
+    background-color: var(--mainBgColor);
+}
+body:has(#mood:checked) .navBar{
+
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+}
+body:has(#mood:checked) .navBar .leftPart a {
+    color: var(--lightColor);
+}
+body:has(#mood:checked) .navBar .centerPart a:hover {
+    color: var(--lightColor);
+}
+body:has(#mood:checked) .navBar .rightPart i {
+    color: var(--lightColor);
+}
+
+body:not(body:has(:target)):has(#mood:checked) li a[href="#Home"],
+body:has(#Home:target):has(#mood:checked) li a[href="#Home"],
+body:has(#Contact:target):has(#mood:checked) li a[href="#Contact"],
+body:has(#Gallery:target):has(#mood:checked) li a[href="#Gallery"],
+body:has(#Chefs:target):has(#mood:checked) li a[href="#Chefs"]
+{
+    --lightColor: #fff;
+    color: var(--lightColor);
+}
+body:has(#mood:checked) .home-content h2 {
+    color: var(--lightColor);
+}
+body:has(#mood:checked) .home-content p {
+    color: #6d6d7e;
+}
+
+body:has(#mood:checked) .home-content .btns span{
+    color: var(--lightColor);
+}
+body:has(#mood:checked) .home-content .btns button{
+    color: var(--darkColor);
+}
+body:has(#mood:checked) .home-content .btns button:hover{
+    --mainBgColor: #ed9e30;
+    background-color: var(--mainBgColor);
+    border: var(--mainBgColor) 1px solid;
+}
+
+body:has(#mood:checked) .chefs .title p {
+    color: var(--lightColor);
+
+}
+body:has(#mood:checked) .chefs .innerContent {
+    --darkColor:#171717;
+    background-color: var(--darkColor);
+}
+body:has(#mood:checked) .chefs .image::after {
+    background-image: url(../imgs/team-shape-dark.svg);
+}
+body:has(#mood:checked) .chefs .caption h3 {
+    color: var(--lightColor);
+}
+
+body:has(#mood:checked) .chefs .caption p {
+    color: #777;
+}
+
+body:has(#mood:checked) .gallery {
+    background-color: #252525;
+}
+body:has(#mood:checked) .gallery .title p {
+    color: var(--lightColor);
+}
+body:has(#mood:checked) .contact {
+    background-color: #202020;
+}
+body:has(#mood:checked) .contact .innerInfo {
+    background-color: var(--darkColor);
+}
+body:has(#mood:checked) .contact .innerInfo p , .contact .innerInfo p span , .contact .innerInfo a {
+    color: var(--lightColor);
+}
+body:has(#mood:checked)  .contact form {
+    background-color: #171717;
+}
+body:has(#mood:checked)  .contact form button{
+    color: #000;
+}
